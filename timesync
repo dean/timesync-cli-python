@@ -28,7 +28,7 @@ def get_list(endpoint):
     """
     r = requests.get(URL + endpoint)
     if r.status_code != 200:
-        print 'Domain %s at endpoint: %s retrieved a non-200 status code.'
+        print 'Domain %s at endpoint: %s retrieved a non-200 status code.' % (URL, endpoint)
         exit(1)
     return r.json()
 
